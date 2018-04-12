@@ -1,5 +1,6 @@
 import unittest
 import boto3
+import os
 from media.s3_storage import S3MediaStorage
 
 
@@ -9,7 +10,7 @@ class TestS3Storage(unittest.TestCase):
         # A arrange
         self.there_is_source_file("files/test.txt")
         s3 = self.there_is_recource_available()
-        storage = S3MediaStorage(s3)
+        storage = S3MediaStorage(s3, os.getenv('APP_BUCKET_NAME'))
 
         # A act
         to_be_upl = open("files/test.txt", "rb")
