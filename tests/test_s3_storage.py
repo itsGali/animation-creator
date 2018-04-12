@@ -1,4 +1,5 @@
 import unittest
+from media.s3_storage import S3MediaStorage
 
 
 class TestS3Storage(unittest.TestCase):
