@@ -8,4 +8,4 @@ class S3MediaStorage:
         self.bucket.put_object(Key=dest, Body=source)
 
     def contains(self, path):
-        return True
+        self.s3.Object(self.bucket_name, path).load()
