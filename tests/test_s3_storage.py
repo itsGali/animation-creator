@@ -14,6 +14,7 @@ class TestS3Storage(unittest.TestCase):
 
         # A assert
         assert storage.contains(path="tests/foo/boo.txt")
+        assert False == storage.contains(path="should/not/exitst.txt")
 
     def there_is_source_file(self, path):
         my_file = open(path, 'w')
