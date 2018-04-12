@@ -1,2 +1,5 @@
 class S3MediaStorage:
-    pass
+    def store(self, dest, source):
+        pass
+    def contains(self, path):
+        pass
